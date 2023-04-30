@@ -1,0 +1,46 @@
+1) Install symfony
+2) Set up a local web server using symfony-cli
+3) Connect 2 api with exchange rates and write them to json file via console command (Base currency USD)
+API:
+https://api.coinpaprika.com/v1/exchanges/coinbase/markets?quotes=USD
+https://www.floatrates.com/daily/usd.json
+Any libraries can be used to implement
+
+4) Implement receiving data from a file (The base currency can be any upon request, pass through a parameter, the default is always USD)
+Answer example:
+BASE EUR
+{
+     {
+         "rate": 1.0895752726505115,
+         "code": "USD"
+     },
+     {
+         rate: 1
+         code: EUR
+     },
+}
+BASE USD
+{
+     {
+         rate: 1
+         "code": "USD"
+     },
+     {
+         "rate": 0.91778881652425,
+         code: EUR
+     },
+}
+
+5) Implement a currency converter with any amount and any currency
+Answer example:
+{
+     "amount": 30172.83,
+     "currency_from": {
+         "rate": 0.00003314239996712274,
+         "code": "BTC"
+     },
+       "currency_to": {
+         rate: 1
+         "code": "USD"
+}
+}
